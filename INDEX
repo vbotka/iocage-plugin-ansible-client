@@ -1,0 +1,11 @@
+{
+    "aansible-client": {
+        "MANIFEST": "ansible-client.json",
+        "name": "Ansible Client",
+        "description": "Ansible Client",
+        "official": false,
+        "category": "ansible",
+        "maintainer": "Vladimir Botka <vbotka@gmail.com>",
+        "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
+    }
+}
