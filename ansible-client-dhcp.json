@@ -1,7 +1,7 @@
 {
-  "name": "ansible-client",
+  "name": "ansible-client_dhcp",
   "release": "15.0-RELEASE",
-  "artifact": "https://github.com/vbotka/iocage-plugin-ansible-client.git",
+  "artifact": "https://github.com/vbotka/iocage-plugins.git",
   "properties": {
       "bpf":"1",
       "dhcp":"1",
