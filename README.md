@@ -4,13 +4,13 @@
 * [iocage plugins](https://freebsd.github.io/iocage/plugins.html)
 
 
-## ansible-client-dhcp
+## ansible-zero
 
-DHCP enabled jail.
+Plain jail. post_install.sh only.
 
 ```sh
-shell> iocage fetch -P ansible-client -g https://github.com/vbotka/iocage-plugins bpf=1 dhcp=1 vnet=1
-Plugin: ansible-client
+shell> iocage fetch -P ansible-zero -g https://github.com/vbotka/iocage-plugins bpf=1 dhcp=1 vnet=1
+Plugin: ansible-zero
   Official Plugin: False
   Using RELEASE: 15.0-RELEASE
   Using Branch: 15.0-RELEASE
@@ -18,8 +18,8 @@ Plugin: ansible-client
   These pkgs will be installed:
 
 Testing Host DNS response to pkg.FreeBSD.org
-Testing ansible-client's SRV response to pkg.FreeBSD.org
-Testing ansible-client's DNSSEC response to pkg.FreeBSD.org
+Testing ansible-zero's SRV response to pkg.FreeBSD.org
+Testing ansible-zero's DNSSEC response to pkg.FreeBSD.org
 
 Installing plugin packages:
 
@@ -36,10 +36,9 @@ result
 
 ```sh
 shell> iocage list -P
-+-----+----------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
-| JID |      NAME      | BOOT | STATE |   TYPE   |   RELEASE    |         IP4          | IP6 | TEMPLATE | PORTAL | DOC_URL |
-+=====+================+======+=======+==========+==============+======================+=====+==========+========+=========+
-| 41  | ansible-client | on   | up    | pluginv2 | 15.0-RELEASE | epair0b|10.10.99.109 | -   | -        | -      | -       |
-+-----+----------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
-
++-----+--------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
+| JID |     NAME     | BOOT | STATE |   TYPE   |   RELEASE    |         IP4          | IP6 | TEMPLATE | PORTAL | DOC_URL |
++=====+==============+======+=======+==========+==============+======================+=====+==========+========+=========+
+| 57  | ansible-zero | on   | up    | pluginv2 | 15.0-RELEASE | epair0b|10.10.99.119 | -   | -        | -      | -       |
++-----+--------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
 ```
