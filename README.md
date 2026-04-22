@@ -9,18 +9,37 @@
 DHCP enabled jail.
 
 ```sh
-shell> iocage fetch -P ansible-client-dhcp -g https://github.com/vbotka/iocage-plugins -c 2
+shell> iocage fetch -P ansible-client -g https://github.com/vbotka/iocage-plugins bpf=1 dhcp=1 vnet=1
+Plugin: ansible-client
+  Official Plugin: False
+  Using RELEASE: 15.0-RELEASE
+  Using Branch: 15.0-RELEASE
+  Post-install Artifact: https://github.com/vbotka/iocage-plugins.git
+  These pkgs will be installed:
+
+Testing Host DNS response to pkg.FreeBSD.org
+Testing ansible-client's SRV response to pkg.FreeBSD.org
+Testing ansible-client's DNSSEC response to pkg.FreeBSD.org
+
+Installing plugin packages:
+
+Fetching artifact... 
+Cloning git repository
+
+Branch 15.0-RELEASE does not exist at https://github.com/vbotka/iocage-plugins.git!
+Using "master" branch for plugin, this may not work with your RELEASE
+
+Running post_install.sh
 ```
 
 result
 
 ```sh
-iocage list -P
-+-----+-----------------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
-| JID |         NAME          | BOOT | STATE |   TYPE   |   RELEASE    |         IP4          | IP6 | TEMPLATE | PORTAL | DOC_URL |
-+=====+=======================+======+=======+==========+==============+======================+=====+==========+========+=========+
-| 18  | ansible-client_dhcp_1 | on   | up    | pluginv2 | 15.0-RELEASE | epair0b|10.10.99.112 | -   | -        | -      | -       |
-+-----+-----------------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
-| 21  | ansible-client_dhcp_2 | on   | up    | pluginv2 | 15.0-RELEASE | epair0b|10.10.99.113 | -   | -        | -      | -       |
-+-----+-----------------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
+shell> iocage list -P
++-----+----------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
+| JID |      NAME      | BOOT | STATE |   TYPE   |   RELEASE    |         IP4          | IP6 | TEMPLATE | PORTAL | DOC_URL |
++=====+================+======+=======+==========+==============+======================+=====+==========+========+=========+
+| 41  | ansible-client | on   | up    | pluginv2 | 15.0-RELEASE | epair0b|10.10.99.109 | -   | -        | -      | -       |
++-----+----------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
+
 ```

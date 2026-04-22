@@ -1,8 +1,8 @@
 {
-    "ansible-client": {
-        "MANIFEST": "ansible-client.json",
-        "name": "Ansible Client",
-        "description": "Ansible Client.",
+    "ansible-zero": {
+        "MANIFEST": "ansible-zero.json",
+        "name": "Ansible Zero",
+        "description": "Ansible Client. post_install.sh only.",
         "official": false,
         "category": "ansible",
         "maintainer": "Vladimir Botka <vbotka@gmail.com>",
