@@ -1,12 +1,7 @@
 {
-  "name": "ansible-client_dhcp",
+  "name": "ansible-client",
   "release": "15.0-RELEASE",
   "artifact": "https://github.com/vbotka/iocage-plugins.git",
-  "properties": {
-      "bpf":"1",
-      "dhcp":"1",
-      "vnet":"1"
-      },
   "pkgs": [],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
   "fingerprints": {

@@ -1,8 +1,8 @@
 {
-    "ansible-client-dhcp": {
-        "MANIFEST": "ansible-client-dhcp.json",
-        "name": "Ansible Client DHCP",
-        "description": "Ansible Client. DHCP enabled.",
+    "ansible-client": {
+        "MANIFEST": "ansible-client.json",
+        "name": "Ansible Client",
+        "description": "Ansible Client.",
         "official": false,
         "category": "ansible",
         "maintainer": "Vladimir Botka <vbotka@gmail.com>",
