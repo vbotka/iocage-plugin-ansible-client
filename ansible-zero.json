@@ -1,5 +1,5 @@
 {
-  "name": "ansible-client",
+  "name": "ansible-zero",
   "release": "15.0-RELEASE",
   "artifact": "https://github.com/vbotka/iocage-plugins.git",
   "pkgs": [],
