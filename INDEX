@@ -7,5 +7,14 @@
         "category": "ansible",
         "maintainer": "Vladimir Botka <vbotka@gmail.com>",
         "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
+    },
+    "syslog-ng": {
+        "MANIFEST": "syslog-ng.json",
+        "name": "syslog-ng",
+        "description": "Enhanced log daemon, supporting a wide range of input and output methods: syslog, unstructured text, message queues, databases (SQL and NoSQL alike) and more.",
+        "official": false,
+        "category": "ansible",
+        "maintainer": "Vladimir Botka <vbotka@gmail.com>",
+        "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
     }
 }
