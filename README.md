@@ -6,39 +6,10 @@
 
 ## ansible-zero
 
-Plain jail. post_install.sh only.
+Install: python3, sudo
+Run: post_install.sh
 
-```sh
-shell> iocage fetch -P ansible-zero -g https://github.com/vbotka/iocage-plugins bpf=1 dhcp=1 vnet=1
-Plugin: ansible-zero
-  Official Plugin: False
-  Using RELEASE: 15.0-RELEASE
-  Using Branch: 15.0-RELEASE
-  Post-install Artifact: https://github.com/vbotka/iocage-plugins.git
-  These pkgs will be installed:
+## syslog-ng
 
-Testing Host DNS response to pkg.FreeBSD.org
-Testing ansible-zero's SRV response to pkg.FreeBSD.org
-Testing ansible-zero's DNSSEC response to pkg.FreeBSD.org
-
-Installing plugin packages:
-
-Fetching artifact... 
-Cloning git repository
-
-Branch 15.0-RELEASE does not exist at https://github.com/vbotka/iocage-plugins.git!
-Using "master" branch for plugin, this may not work with your RELEASE
-
-Running post_install.sh
-```
-
-result
-
-```sh
-shell> iocage list -P
-+-----+--------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
-| JID |     NAME     | BOOT | STATE |   TYPE   |   RELEASE    |         IP4          | IP6 | TEMPLATE | PORTAL | DOC_URL |
-+=====+==============+======+=======+==========+==============+======================+=====+==========+========+=========+
-| 57  | ansible-zero | on   | up    | pluginv2 | 15.0-RELEASE | epair0b|10.10.99.119 | -   | -        | -      | -       |
-+-----+--------------+------+-------+----------+--------------+----------------------+-----+----------+--------+---------+
-```
+Install: python3, sudo, syslog-ng
+Run: post_install.sh
