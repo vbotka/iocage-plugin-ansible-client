@@ -3,6 +3,8 @@
   "release": "15.0-RELEASE",
   "artifact": "https://github.com/vbotka/iocage-plugins.git",
     "pkgs": [
+	"python-3",
+	"sudo",
 	"syslog-ng"
     ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
