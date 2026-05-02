@@ -1,6 +1,6 @@
 #!/bin/sh
 
-plugin_name: "$(hostname)"
+plugin_name=$(hostname)
 
 case "$plugin_name" in
     ansible-test)
