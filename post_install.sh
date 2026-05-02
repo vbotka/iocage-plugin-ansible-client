@@ -1,8 +1,8 @@
 #!/bin/sh
 
 plugin_name_full=$(hostname)
-plugin_name=$(echo "$plugin_name_full" | cut -d'_' -f1)
-plugin_no=$(echo "$plugin_name_full" | cut -d'_' -f2)
+plugin_name="${plugin_name_full%:*}"
+plugin_no="${$plugin_name_full#*:}"
 
 cat << EOF > /root/PLUGIN_INFO
 plugin_name: "$plugin_name"
