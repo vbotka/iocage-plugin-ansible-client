@@ -13,6 +13,7 @@ EOF
 	cat << EOF > "${ansible_custom_facts_dir}/iocage.fact"
 {
   "iocage_plugin_name": "$plugin_name"
+}
 EOF
 	;;
     ansible-zero)
