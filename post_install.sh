@@ -4,17 +4,12 @@ plugin_name=$(hostname)
 
 case "$plugin_name" in
     ansible-test)
-	cat << EOF > /root/PLUGIN_INFO
-plugin_name: $plugin_name
-plugin_ip: $IOCAGE_PLUGIN_IP
-EOF
+	. "$(dirname "$0")/post_install_ansible_test.sh"
 	;;
     ansible-zero)
-	pw add user -n admin -c Administrator -s /bin/sh -m
-        echo "admin ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers.d/admin
-	cat << EOF > /root/PLUGIN_INFO
-plugin_name: $plugin_name
-plugin_ip: $IOCAGE_PLUGIN_IP
-EOF
+	. "$(dirname "$0")/post_install_ansible_zero.sh"
+	;;
+    syslog-ng)
+	. "$(dirname "$0")/post_install_syslog_ng.sh"
 	;;
 esac
