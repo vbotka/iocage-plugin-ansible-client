@@ -1,7 +1,7 @@
 {
     "ansible-syslogng": {
         "MANIFEST": "ansible-syslogng.json",
-        "name": "syslog-ng",
+        "name": "Ansible syslog-ng",
         "description": "Enhanced log daemon, supporting a wide range of input and output methods: syslog, unstructured text, message queues, databases (SQL and NoSQL alike) and more.",
         "official": false,
         "category": "ansible",

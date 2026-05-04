@@ -5,6 +5,7 @@ ansible_custom_facts_dir="/etc/ansible/facts.d"
 
 case "$plugin_name" in
     ansible-syslogng)
+	mkdir -p "$ansible_custom_facts_dir"
 	cat << EOF > "${ansible_custom_facts_dir}/iocage.fact"
 {
   "iocage_plugin_name": "$plugin_name"
@@ -24,6 +25,7 @@ EOF
 EOF
 	;;
     ansible-zero)
+	mkdir -p "$ansible_custom_facts_dir"
 	cat << EOF > "${ansible_custom_facts_dir}/iocage.fact"
 {
   "iocage_plugin_name": "$plugin_name"
