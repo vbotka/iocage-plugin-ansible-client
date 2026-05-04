@@ -4,17 +4,17 @@
 * [iocage plugins](https://freebsd.github.io/iocage/plugins.html)
 
 
+## ansible-syslogng
+
+Install: python3, sudo, syslog-ng
+Run: post_install.sh
+
 ## ansible-test
 
-Install: -
-Run: post_install_ansible_test.sh
+Install: python3, sudo
+Run: post_install.sh
 
 ## ansible-zero
 
 Install: python3, sudo
-Run: post_install_ansible_zero.sh
-
-## syslog-ng
-
-Install: python3, sudo, syslog-ng
-Run: post_install_syslog_ng.sh
+Run: post_install.sh
