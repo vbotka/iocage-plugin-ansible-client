@@ -6,14 +6,14 @@ ansible_custom_facts_dir="/etc/ansible/facts.d"
 case "$plugin_name" in
     ansible-syslogng)
 	mkdir -p "$ansible_custom_facts_dir"
-	cat << EOF > "${ansible_custom_facts_dir}/iocage.fact"
+	cat << EOF2 > "${ansible_custom_facts_dir}/iocage.fact"
 #!/bin/sh
-cat << EOF2
+cat << EOF
 {
   "iocage_plugin_name": "ansible-syslogng"
 }
-EOF2
 EOF
+EOF2
 	chmod a+x "${ansible_custom_facts_dir}/iocage.fact"
 	;;
     ansible-test)
@@ -22,14 +22,14 @@ plugin_name: $plugin_name
 plugin_ip: $IOCAGE_PLUGIN_IP
 EOF
 	mkdir -p "$ansible_custom_facts_dir"
-	cat << EOF > "${ansible_custom_facts_dir}/iocage.fact"
+	cat << EOF2 > "${ansible_custom_facts_dir}/iocage.fact"
 #!/bin/sh
-cat << EOF2
+cat << EOF
 {
   "iocage_plugin_name": "ansible-syslogng"
 }
-EOF2
 EOF
+EOF2
 	chmod a+x "${ansible_custom_facts_dir}/iocage.fact"
 	;;
     ansible-zero)
