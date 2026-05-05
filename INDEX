@@ -8,6 +8,24 @@
         "maintainer": "Vladimir Botka <vbotka@gmail.com>",
         "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
     },
+    "ansible-syslogng-client": {
+        "MANIFEST": "ansible-syslogng-client.json",
+        "name": "Ansible syslog-ng client",
+        "description": "Enhanced log daemon, supporting a wide range of input and output methods: syslog, unstructured text, message queues, databases (SQL and NoSQL alike) and more.",
+        "official": false,
+        "category": "ansible",
+        "maintainer": "Vladimir Botka <vbotka@gmail.com>",
+        "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
+    },
+    "ansible-syslogng-server": {
+        "MANIFEST": "ansible-syslogng-server.json",
+        "name": "Ansible syslog-ng server",
+        "description": "Enhanced log daemon, supporting a wide range of input and output methods: syslog, unstructured text, message queues, databases (SQL and NoSQL alike) and more.",
+        "official": false,
+        "category": "ansible",
+        "maintainer": "Vladimir Botka <vbotka@gmail.com>",
+        "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
+    },
     "ansible-test": {
         "MANIFEST": "ansible-test.json",
         "name": "Ansible Test",
