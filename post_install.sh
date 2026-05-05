@@ -8,11 +8,11 @@ case "$plugin_name" in
 	mkdir -p "$ansible_custom_facts_dir"
 	cat << EOF > "${ansible_custom_facts_dir}/iocage.fact"
 #!/bin/sh
-cat << EOF
+cat << EOF2
 {
   "iocage_plugin_name": "ansible-syslogng"
 }
-EOF
+EOF2
 EOF
 	chmod a+x "${ansible_custom_facts_dir}/iocage.fact"
 	;;
@@ -24,11 +24,11 @@ EOF
 	mkdir -p "$ansible_custom_facts_dir"
 	cat << EOF > "${ansible_custom_facts_dir}/iocage.fact"
 #!/bin/sh
-cat << EOF
+cat << EOF2
 {
   "iocage_plugin_name": "ansible-syslogng"
 }
-EOF
+EOF2
 EOF
 	chmod a+x "${ansible_custom_facts_dir}/iocage.fact"
 	;;
