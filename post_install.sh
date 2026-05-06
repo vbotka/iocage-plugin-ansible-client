@@ -61,6 +61,9 @@ EOF2
 plugin_name: $plugin_name
 plugin_ip: $IOCAGE_PLUGIN_IP
 EOF
+	cat << EOF > /root/hosts
+localhost.my.domain ansible_connection=local
+EOF
 	mkdir -p "$ansible_custom_facts_dir"
 	cat << EOF2 > "${ansible_custom_facts_dir}/iocage.fact"
 #!/bin/sh
