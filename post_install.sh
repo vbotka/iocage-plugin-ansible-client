@@ -10,7 +10,7 @@ case "$plugin_name" in
 #!/bin/sh
 cat << EOF
 {
-  "iocage_plugin_name": "ansible-syslogng"
+  "iocage_plugin_name": "$plugin_name"
 }
 EOF
 EOF2
@@ -22,7 +22,7 @@ EOF2
 #!/bin/sh
 cat << EOF
 {
-  "iocage_plugin_name": "ansible-syslogng-client"
+  "iocage_plugin_name": "$plugin_name"
 }
 EOF
 EOF2
@@ -34,7 +34,7 @@ EOF2
 #!/bin/sh
 cat << EOF
 {
-  "iocage_plugin_name": "ansible-syslogng-server"
+  "iocage_plugin_name": "$plugin_name"
 }
 EOF
 EOF2
@@ -50,7 +50,23 @@ EOF
 #!/bin/sh
 cat << EOF
 {
-  "iocage_plugin_name": "ansible-syslogng"
+  "iocage_plugin_name": "$plugin_name"
+}
+EOF
+EOF2
+	chmod a+x "${ansible_custom_facts_dir}/iocage.fact"
+	;;
+    ansible-pull-test)
+	cat << EOF > /root/PLUGIN_INFO
+plugin_name: $plugin_name
+plugin_ip: $IOCAGE_PLUGIN_IP
+EOF
+	mkdir -p "$ansible_custom_facts_dir"
+	cat << EOF2 > "${ansible_custom_facts_dir}/iocage.fact"
+#!/bin/sh
+cat << EOF
+{
+  "iocage_plugin_name": "$plugin_name"
 }
 EOF
 EOF2

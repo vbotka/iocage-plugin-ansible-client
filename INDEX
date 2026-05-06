@@ -35,6 +35,15 @@
         "maintainer": "Vladimir Botka <vbotka@gmail.com>",
         "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
     },
+    "ansible-pull-test": {
+        "MANIFEST": "ansible-pull-test.json",
+        "name": "Ansible Pull Test",
+        "description": "Ansible Pull Test.",
+        "official": false,
+        "category": "ansible",
+        "maintainer": "Vladimir Botka <vbotka@gmail.com>",
+        "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
+    },
     "ansible-zero": {
         "MANIFEST": "ansible-zero.json",
         "name": "Ansible Zero",
