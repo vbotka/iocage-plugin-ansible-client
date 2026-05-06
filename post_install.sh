@@ -71,6 +71,7 @@ cat << EOF
 EOF
 EOF2
 	chmod a+x "${ansible_custom_facts_dir}/iocage.fact"
+	echo "LC_ALL=en_US.UTF-8" >> /root/.profile
 	;;
     ansible-zero)
 	;;
