@@ -57,7 +57,7 @@ EOF2
 	# Configure and start syslog-ng client
 	mkdir /root/ansible-conf-syslogng-client
 	cd /root/ansible-conf-syslogng-client
-	ansible-pull -i hosts -U https://github.com/vbotka/ansible-conf-syslogng-server.git -d /root/ansible-conf-syslogng-server pb-logclient.yml
+	ansible-pull -i hosts -U https://github.com/vbotka/ansible-conf-syslogng-server.git -d /root/ansible-conf-syslogng-client pb-logclient.yml
 	;;
     ansible-pull-syslogng-server)
 	# Create custom facts
