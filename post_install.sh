@@ -5,6 +5,7 @@ ansible_custom_facts_dir="/etc/ansible/facts.d"
 
 case "$plugin_name" in
     ansible-syslogng)
+	# Create custom facts
 	mkdir -p "$ansible_custom_facts_dir"
 	cat << EOF2 > "${ansible_custom_facts_dir}/iocage.fact"
 #!/bin/sh
@@ -15,7 +16,12 @@ cat << EOF
 EOF
 EOF2
 	chmod a+x "${ansible_custom_facts_dir}/iocage.fact"
+	# Ansible needs UTF-8
 	echo "LC_ALL=en_US.UTF-8" >> /root/.profile
+	# Configure and start syslog-ng server
+	mkdir /root/ansible-conf-syslogng-server
+	cd /root/ansible-conf-syslogng-server
+	ansible-pull -i hosts -U https://github.com/vbotka/ansible-conf-syslogng-server.git -d /root/ansible-conf-syslogng-server /root/ansible-conf-syslogng-server/pb-logserv.yml
 	;;
     ansible-test)
 	cat << EOF > /root/PLUGIN_INFO
