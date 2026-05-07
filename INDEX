@@ -26,6 +26,15 @@
         "maintainer": "Vladimir Botka <vbotka@gmail.com>",
         "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
     },
+    "ansible-pull-syslogng-server": {
+        "MANIFEST": "ansible-pull-syslogng-server.json",
+        "name": "Ansible Pull syslog-ng Server",
+        "description": "Ansible Pull syslog-ng Server.",
+        "official": false,
+        "category": "ansible",
+        "maintainer": "Vladimir Botka <vbotka@gmail.com>",
+        "homepage": "https://github.com/vbotka/ansible-collection-freebsd/wiki"
+    },
     "ansible-zero": {
         "MANIFEST": "ansible-zero.json",
         "name": "Ansible Zero",
