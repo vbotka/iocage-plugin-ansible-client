@@ -54,10 +54,10 @@ EOF2
 	chmod a+x "${ansible_custom_facts_dir}/iocage.fact"
 	# Ansible needs UTF-8
 	echo "LC_ALL=en_US.UTF-8" >> /root/.profile
-	# Configure and start syslog-ng client
+	# Configure syslog-ng client
 	mkdir /root/ansible-conf-syslogng-client
 	cd /root/ansible-conf-syslogng-client
-	ansible-pull -i hosts -U https://github.com/vbotka/ansible-conf-syslogng-server.git -d /root/ansible-conf-syslogng-client pb-logclient.yml
+	ansible-pull -i hosts -U https://github.com/vbotka/ansible-conf-syslogng-client.git -d /root/ansible-conf-syslogng-client pb-logclient.yml
 	;;
     ansible-pull-syslogng-server)
 	# Create custom facts
